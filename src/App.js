@@ -6,6 +6,7 @@ import Navber from './Shared/Navber';
 import TodoList from './Pages/TodoList/TodoList';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
+import RequireAuth from './Shared/RequireAuth';
 
 
 function App() {
@@ -13,9 +14,13 @@ function App() {
     <div>
       <Navber />
       <Routes>
-        <Route path='/' element={<TodoList />}></Route>
+        <Route path='/' element={
+          <RequireAuth>
+            <TodoList />
+          </RequireAuth>
+        }></Route>
         <Route path='/login' element={<Login />}></Route>
-        <Route path='/signup' element={<SignUp/>}></Route>
+        <Route path='/signup' element={<SignUp />}></Route>
       </Routes>
       <ToastContainer />
     </div>
