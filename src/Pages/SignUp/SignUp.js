@@ -13,7 +13,6 @@ const SignUp = () => {
 
     const navigate = useNavigate();
     const [userInfo, setUserInfo] = useState({})
-    // console.log(userInfo)
     const [handleError, setError] = useState('');
     const { password, confirmpassword } = userInfo;
 

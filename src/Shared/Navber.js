@@ -3,6 +3,9 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
 import auth from '../firebase.init';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+
 
 const Navber = () => {
     const [user] = useAuthState(auth);
@@ -24,7 +27,7 @@ const Navber = () => {
                 <div className="navbar-center hidden lg:flex">
                 </div>
                 <div className="navbar-end pr-3">
-                    {user?.uid ? <button   onClick={handlesignOut} className="btn btn-primary  text-white">Sign Out</button> : <button onClick={handlesignOut} className="btn btn-primary   text-white"><NavLink to='/login'>Login</NavLink></button>}
+                    {user?.uid ? <button   onClick={handlesignOut} className="btn bg-blue-700 ring-2 ring-white ring-offset-0  text-white">Sign Out <FontAwesomeIcon  className='ml-3' icon={faArrowRightFromBracket} /> </button> : <button onClick={handlesignOut} className="btn   bg-blue-700  ring-2 ring-white ring-offset-0 text-white"><NavLink to='/login'>Login</NavLink></button>}
                 </div>
             </div>
         </div>
