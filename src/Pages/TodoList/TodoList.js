@@ -6,6 +6,8 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import TaskBox from '../TaskBox/TaskBox';
 import './TodoList.css';
+import { toast } from 'react-toastify';
+
 
 
 
@@ -48,6 +50,7 @@ const TodoList = () => {
                 console.log(data)
             })
         e.target.reset();
+        toast.success("Added a new task")
     }
 
     const handleTaskDelete = id => {
