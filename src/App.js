@@ -11,7 +11,7 @@ import RequireAuth from './Shared/RequireAuth';
 
 function App() {
   return (
-    <div>
+    <div className='app mt-10'>
       <Navber />
       <Routes>
         <Route path='/' element={
