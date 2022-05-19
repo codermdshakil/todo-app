@@ -10,7 +10,6 @@ import '../../Shared/style.css';
 
 const SignUp = () => {
 
-
     const navigate = useNavigate();
     const [userInfo, setUserInfo] = useState({})
     const [handleError, setError] = useState('');

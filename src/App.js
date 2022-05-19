@@ -7,6 +7,7 @@ import TodoList from './Pages/TodoList/TodoList';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
 import RequireAuth from './Shared/RequireAuth';
+import ResetPassword from './Pages/ResetPassword';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <TodoList />
           </RequireAuth>
         }></Route>
+        <Route path='/resetpassword'element={<ResetPassword/>}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<SignUp />}></Route>
       </Routes>

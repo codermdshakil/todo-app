@@ -79,7 +79,10 @@ const TodoList = () => {
                     </div>
                 </div>
             </div>
-            <h2 className='flex items-center justify-center text-center text-2xl text-white py-4 bg-secondary font-bold mb-6 border-x-4'><span className='btn mr-2'></span> Your all Task list</h2>
+            <div className='text-center text-white py-4 bg-secondary font-bold mb-6 border-x-4 shadow-sm'>
+                <h2 className=' text-3xl'>Your all Task list</h2>
+                <p>Please After adding task Reload the page !!</p>
+            </div>
             <div>
                 {
                     myTasks.map(task => <TaskBox key={task._id} task={task} handleTaskDelete={handleTaskDelete} ></TaskBox>)
